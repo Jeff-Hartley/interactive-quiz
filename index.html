@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Quiz Exercise</title>
+
+    <style>
+        h1{
+            margin: 0;
+            color:ghostwhite;
+            text-align: center;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-weight: bold;
+            font-size: 125px;
+        }
+
+        h2{
+            color:ghostwhite;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            margin: 15px;
+        }
+
+        h3 {
+            color:darkviolet;
+            text-align: right;
+            margin: 20px;
+        }
+
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
+        p { 
+            color:red;
+            text-align: center;
+    
+        }
+
+        label {
+            color:red;
+            margin: 15px;
+    
+        }
+
+        html {
+            background-color: rgb(20, 20, 20);
+        }
+
+        button {
+            background-color:red;
+         color:ghostwhite;
+         margin: 15px;
+            border-color: red;
+    
+        }
+
+        
+    </style>
+</head>
+<body>
+    
+    <!--main header/image/opening paragraph-->
+    <h1>CANADA QUIZ!</h1>
+    <img src="data:image/png;base64,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" alt="Canadian Flag"><br><br>
+    <p>Test your knowledge about all things Canada! The questions are simple, with easy answers. Below is Google image that will take you to the search engine in case you <i>really</i> need help. Good luck and have fun.</p><br>
+
+    <a href="https://google.com"><img src="https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-512.png" alt="Google"></a><br><br>
+    <!--Name input-->
+    <form> 
+            <label><input type="Input your name."></label><br>
+            <button type="submit">Your name</button><br>
+        
+    </form>
+
+    <form>
+        <!--Question 1-->
+        <h2><i><b>1.</b></i> Who is the Prime Minister of Canada?</h2>
+        <label><input type="checkbox" name="Question 1" value="a"> A) Ronald McDonald</label><br>
+        <label><input type="checkbox" name="Question 1" value="b"> B) Justin Trudeau</label><br>
+        <label><input type="checkbox" name="Question 1" value="c"> C) Vin Diesel</label><br>
+        <label><input type="checkbox" name="Question 1" value="D"> D) A cat wearing sunglasses</label><br><br>
+        
+
+        <!--Question 2-->
+        <h2><i><b>2.</b></i> What is the capital of Canada?</h2>
+        <label><input type="checkbox" name="Question 2" value="a"> A) Thunder Bay</label><br>
+        <label><input type="checkbox" name="Question 2" value="b"> B) Tijuana</label><br>
+        <label><input type="checkbox" name="Question 2" value="c"> C) Ottawa</label><br>
+        <label><input type="checkbox" name="Question 2" value="d"> D) United States of America</label><br><br>
+
+         <!--Question 3-->
+         <h2><i><b>3.</b></i> What country is Canada north of?</h2>
+         <label><input type="checkbox" name="Question 3" value="a"> A) Ukraine</label><br>
+         <label><input type="checkbox" name="Question 3" value="b"> B) Australia</label><br>
+         <label><input type="checkbox" name="Question 3" value="c"> C) Vietnam</label><br>
+         <label><input type="checkbox" name="Question 3" value="d"> D) United States of America</label><br><br>
+
+        <!--Question 4-->
+         <h2><i><b>4.</b></i> How many provinces and territories are there?</h2>
+         <label><input type="checkbox" name="Question 4" value="a"> A) 13</label><br>
+         <label><input type="checkbox" name="Question 4" value="b"> B) 2</label><br>
+         <label><input type="checkbox" name="Question 4" value="c"> C) 475,000</label><br>
+         <label><input type="checkbox" name="Question 4" value="d"> D) 50</label><br><br>
+
+        <!--Question 5-->
+         <h2><i><b>5.</b></i> What colours are Canada's flag?</h2>
+         <label><input type="checkbox" name="Question 5" value="a"> A) Yellow, Black, and Purple</label><br>
+         <label><input type="checkbox" name="Question 5" value="b"> B) Green, Green and more Green</label><br>
+         <label><input type="checkbox" name="Question 5" value="c"> C) Black and Yellow</label><br>
+         <label><input type="checkbox" name="Question 5" value="d"> D) Red and White</label><br><br>
+        
+         
+        <!--Submit Button-->
+        <button type="submit">Submit Quiz</button>
+    </form><br><br>
+
+    <!--name of student-->
+    <h3><u>Jeff Hartley</u></h4>
+</body>
+</html>
